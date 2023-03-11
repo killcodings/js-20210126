@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="../1-notification/index.js"></script>
 </head>
 <body>
 
@@ -30,7 +31,7 @@
   import SortableTable from './index.js';
   import data from './products-data.js';
 
-  const header = [
+  const headerConfig = [
     {
       id: 'images',
       title: 'Image',
@@ -38,7 +39,7 @@
       template: (data = []) => {
         return `
           <div class="sortable-table__cell">
-            <img class="sortable-table-image" alt="Image" src="${data[0]?.url}">
+            <img class="sortable-table-image" alt="Image" src="${data[0]?.url || 'https://via.placeholder.com/32'}">
           </div>
         `;
       }
@@ -69,7 +70,7 @@
     },
   ];
 
-  const sortableTable = new SortableTable(header, { data });
+  const sortableTable = new SortableTable(headerConfig, data);
 
   root.append(sortableTable.element);
 

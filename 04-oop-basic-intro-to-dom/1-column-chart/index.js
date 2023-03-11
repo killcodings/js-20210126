@@ -54,7 +54,7 @@ export default class ColumnChart {
 
   render() {
     const element = document.createElement('div');
-    element.innerHTML = this.createChartBody;
+    element.innerHTML = this.createChartBody; // без вызова () т.к. это get метод
     this.element = element.firstElementChild;
     if (this.data.length) {
       this.element.classList.remove('column-chart_loading');
@@ -68,7 +68,6 @@ export default class ColumnChart {
 
   createSubElements(element) {
     const elements = element.querySelectorAll('[data-element]');
-
     return [...elements].reduce((accum, subElement) => {
       accum[subElement.dataset.element] = subElement;
 

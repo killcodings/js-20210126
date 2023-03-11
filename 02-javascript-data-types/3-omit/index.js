@@ -14,3 +14,5 @@ export const omit = (obj, ...fields) => {
   }
   return newObj;
 };
+// const obj = {foo: 'foo', bar: 'bar', baz: 'baz'};
+// console.log(omit(obj, 'foo', 'bar'));

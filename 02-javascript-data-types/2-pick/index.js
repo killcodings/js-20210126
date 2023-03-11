@@ -4,6 +4,7 @@
  * @param {...string} fields - the properties paths to pick
  * @returns {object} - returns the new object
  */
+
 export const pick = (obj, ...fields) => {
   const getFields = [...fields];
   const newObj = {};
@@ -14,3 +15,5 @@ export const pick = (obj, ...fields) => {
   });
   return newObj;
 };
+// const obj = {foo: 'foo', bar: 'bar', baz: 'baz'};
+// console.log(pick(obj, 'foo', 'bar'));

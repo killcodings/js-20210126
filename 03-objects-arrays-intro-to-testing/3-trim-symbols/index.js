@@ -28,3 +28,21 @@ export function trimSymbols(string, size) {
   }
   return newStringArray.join('');
 }
+// console.log(trimSymbols('xxxaaaaab', 1));
+
+
+// export function trimSymbols2(string, size) {
+//   if (size === 0) return '';
+//   if (size === undefined) return string;
+//
+//   const firstSlice = string.slice(0, size);
+//   const rest = [...string.slice(size)];
+//
+//   return rest.reduce((accumStr, char) => {
+//     if (!accumStr.endWith(char.repeat(size))) {
+//       accumStr += char;
+//     }
+//     return accumStr;
+//   }, firstSlice);
+// }
+
