@@ -330,8 +330,8 @@ export default class ProductForm {
       <li class="products-edit__imagelist-item sortable-list__item">
         <span>
           <img src="./icon-grab.svg" data-grab-handle alt="grab">
-          <img class="sortable-table__cell-img" alt="${(name)}" src="${(url)}">
-          <span>${(name)}</span>
+          <img class="sortable-table__cell-img" alt="${escapeHtml(name)}" src="${escapeHtml(url)}">
+          <span>${escapeHtml(name)}</span>
         </span>
 
         <button type="button">
